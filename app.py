@@ -6,6 +6,10 @@ from Utility import get_response_from_query, load_llm, load_split_embed_save_vec
 app = Flask(__name__)
 
 folder_path = "db"
+#load llm
+cached_llm=load_llm()
+#create pdf directory
+
 
 #test the model
 @app.route("/ai", methods=["POST"])
@@ -15,8 +19,6 @@ def aiPost():
     query = json_content.get("query")
 
     print(f"query: {query}")
-    #load llm
-    cached_llm=load_llm()
 
     response = cached_llm.invoke(query)
 
