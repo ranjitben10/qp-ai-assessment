@@ -1,0 +1,11 @@
+langchain
+transformers
+sentence_transformers
+langchain_community
+langchain_huggingface
+ollama
+fastembed
+flask
+pdfplumber
+pypdf
+faiss-cpu
