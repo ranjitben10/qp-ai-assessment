@@ -1,5 +1,6 @@
 from flask import Flask, request
 from langchain.prompts import PromptTemplate
+import os
 
 from Utility import get_response_from_query, load_llm, load_split_embed_save_vector_store_func, prompt, retreiver_func, vector_store_func
 
@@ -8,8 +9,10 @@ app = Flask(__name__)
 folder_path = "db"
 #load llm
 cached_llm=load_llm()
-#create pdf directory
 
+#create pdf directory
+new_directory_name = "pdf"
+os.makedirs(new_directory_name, exist_ok=True)
 
 #test the model
 @app.route("/ai", methods=["POST"])
