@@ -3,7 +3,6 @@
 from langchain_community.llms import Ollama
 
 from Embeddings import embeddings_func
-from langchain_community.vectorstores import Chroma
 from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain.chains import create_retrieval_chain
 from langchain_community.document_loaders import PDFPlumberLoader
